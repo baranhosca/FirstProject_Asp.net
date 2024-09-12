@@ -1,0 +1,28 @@
+﻿@model List<First_Project.Models.Book>
+@{
+    <html>
+    <head>
+        <meta name="viewport" content="width=device-width"/>
+        <title>BooksPage</title>
+		<link href="~/twitter-bootstrap/css/bootstrap.css" rel="stylesheet" />
+		<link href="~/twitter-bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+		<link href="~/twitter-bootstrap/css/bootstrap.rtl.css" rel="stylesheet" />
+		<link href="~/twitter-bootstrap/css/bootstrap.rtl.min.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h4>Hello, Welcome to the Book Page</h4>
+        <table class="table table-bordered">
+            @foreach (var b in Model)
+            {
+                <tr>
+                    <td>@b.ID</td>
+                    <td>@b.BookName</td>
+                    <td>@b.Writer</td>
+                    <br />
+                </tr>
+            }
+        </table>
+        <button class="btn btn-warning">Table List</button>
+    </body>
+    </html>
+}
